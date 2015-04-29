@@ -1,5 +1,5 @@
 body {
-    padding: 0px;
+    padding: 50px 0px 0px 0px;
 }
 
 .page-header {
@@ -10,6 +10,14 @@ body {
 
 .navbar-brand { 
     height: 50px;
+}
+
+.navbar-main {
+    position: fixed; 
+    margin: -50px -1px -100px 0px; 
+    padding: 0px; 
+    width: 100.2%; 
+    border-radius: 0px;
 }
 
 .nav-tabs {
@@ -28,22 +36,39 @@ body {
     border-radius: 0;
 }
 
-.nav-list { border-bottom: 1px solid #eee; }
+.nav-list { 
+    border-bottom: none; 
+}
 .nav-list > li { 
-    padding: 20px 15px 15px;
+    padding: 20px 35px 20px 35px;
     border-left: 1px solid #eee; 
 }
-.nav-list > li:last-child { border-right: 1px solid #eee; }
-.nav-list > li > a:hover { text-decoration: none; }
+.nav-list > li:last-child { 
+    border-right: 1px solid #eee; 
+}
+.nav-list > li > a:hover { 
+    text-decoration: none;
+    color: #3399ff;
+}
+.nav-list > li > a > img:hover { 
+    opacity: 0.7; 
+}
 .nav-list > li > a > span {
     display: block;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.mega-dropdown { position: static !important; }
+.nav-list > li > a > img {
+    border-radius: 100%; 
+    margin-bottom: 10px;
+}
+
+.mega-dropdown { 
+    position: static !important; 
+}
 .mega-dropdown-menu {
-    padding: 20px 15px 15px;
+    padding: 10px 15px 10px 15px;
     text-align: center;
     width: 100%;
 }
