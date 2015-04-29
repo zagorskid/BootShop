@@ -40,12 +40,17 @@ body {
     border-bottom: none; 
 }
 .nav-list > li { 
+    width: 180px;
     padding: 20px 35px 20px 35px;
-    border-left: 1px solid #eee; 
+    margin: 0px 0px 0px -5px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee; 
 }
+/*
 .nav-list > li:last-child { 
     border-right: 1px solid #eee; 
 }
+*/
 .nav-list > li > a:hover { 
     text-decoration: none;
     color: #3399ff;
