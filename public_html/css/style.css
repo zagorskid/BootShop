@@ -162,7 +162,7 @@ ul.dropdown-cart li .item-right button{
 .header-text {
     position: absolute;
     top: 30%;
-    left: 2%; 
+    left: 2.5%; 
     /* left: 1.8%; */
     right: auto;
     width: 96.66666666666666%;
@@ -260,6 +260,21 @@ ul.dropdown-cart li .item-right button{
         line-height: 40px;
         font-size: 26px;
         margin-top: 35px;
+    }
+}
+
+@media (min-width: 1850px) {
+    .header-text h2 {
+        font-size: 100px;
+    }
+    .header-text h3 span {
+        font-size: 42px;
+    }
+
+    .btn-min-block {
+        line-height: 45px;
+        font-size: 30px;
+        margin-top: 48px;
     }
 }
 
