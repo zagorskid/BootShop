@@ -38,11 +38,11 @@ h3 {
         font-weight: 300;
         padding: 5px 0px 10px 0px;
     }
-    
+
     h2 {
         font-size: 33px;
     }
-    
+
     h3 {
         font-size: 25px;
     }
@@ -284,7 +284,7 @@ ul.dropdown-cart li .item-right button{
     -moz-box-shadow:    0px 10px 20px 0px rgba(0, 0, 0, 0.5);
     box-shadow:         0px 10px 20px 0px rgba(0, 0, 0, 0.5);
     position: relative;
-    
+
 }
 
 .header-text {
@@ -304,7 +304,7 @@ ul.dropdown-cart li .item-right button{
 
 .header-text h2 span {
     background-color: #2980b9;
-    padding: 10px 20px;    
+    padding: 10px;    
 }
 
 .header-text h3 span {
@@ -351,6 +351,10 @@ ul.dropdown-cart li .item-right button{
 @media (min-width: 970px) {
     .header-text h2 {
         font-size: 60px;
+    }
+    .header-text h2 span {
+        background-color: #2980b9;
+        padding: 10px 25px 25px 25px;    
     }
     .header-text h3 span {
         font-size: 25px;
