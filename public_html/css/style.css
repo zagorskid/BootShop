@@ -2,13 +2,54 @@ body {
     padding: 50px 0px 0px 0px;
 }
 
-.page-header {
+.page-title {
+    background: lightskyblue url("../images/base/title-header-background.jpg") repeat-x center top;
+    width: 100%;
     margin: 0px;
     padding: 0px;
-    background: url(images/header.jpg);
+    margin: 0px 0px 10px 0px;    
 }
 
-.navbar-brand { 
+h1 {
+    font-size: 75px;
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-weight: 300;
+    padding: 0px 0px 25px 0px;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 45px;
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) { 
+    h1 {
+        font-size: 40px;
+        font-weight: 300;
+        padding: 5px 0px 10px 0px;
+    }
+    
+    h2 {
+        font-size: 33px;
+    }
+    
+    h3 {
+        font-size: 25px;
+    }
+}
+
+
+navbar-brand { 
     height: 50px;
 }
 
@@ -44,17 +85,13 @@ body {
     border-bottom: none; 
 }
 .nav-list > li { 
-    width: 180px;
-    padding: 20px 35px 20px 35px;
+    width: 150px;
+    padding: 20px 20px 20px 20px;
     margin: 0px 0px 0px -5px;
     border-left: 1px solid #eee;
-    border-right: 1px solid #eee; 
+    border-right: 1px solid #eee;    
 }
-/*
-.nav-list > li:last-child { 
-    border-right: 1px solid #eee; 
-}
-*/
+
 .nav-list > li > a:hover { 
     text-decoration: none;
     color: #3399ff;
@@ -70,7 +107,10 @@ body {
 
 .nav-list > li > a > img {
     border-radius: 100%; 
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    width: 75px;
+    height: 75px;
+    display: none;
 }
 
 .mega-dropdown { 
@@ -81,6 +121,82 @@ body {
     text-align: center;
     width: 100%;
 }
+
+
+@media (min-width: 420px) {
+    .nav-list > li { 
+        width: 180px;
+        padding: 20px 35px 20px 35px;
+        margin: 0px 0px 0px -5px;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;        
+    }
+
+    .nav-list > li > a > img {
+        border-radius: 100%; 
+        margin-bottom: 10px;
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 770px) {
+    .nav-list > li { 
+        width: 122px;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px -5px;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        font-size: 12px;        
+    }
+
+    .nav-list > li > a > img {
+        border-radius: 100%; 
+        margin-bottom: 10px;
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-list > li { 
+        width: 150px;
+        padding: 20px 35px 20px 22px;
+        margin: 0px 0px 0px -5px;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        font-size: 12px;        
+    }
+
+    .nav-list > li > a > img {
+        border-radius: 100%; 
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-list > li { 
+        width: 190px;
+        padding: 20px 35px 20px 35px;
+        margin: 0px 0px 0px -5px;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee; 
+    }
+
+    .nav-list > li > a > img {
+        border-radius: 100%; 
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+    }
+}
+
 
 
 /* shopping cart */
@@ -159,6 +275,18 @@ ul.dropdown-cart li .item-right button{
 }
 
 /* Carousel Header Styles */
+.carousel-container {
+    width: 100%; 
+    margin: 0px; 
+    padding: 0px; 
+    background: silver;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:    0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow:         0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    
+}
+
 .header-text {
     position: absolute;
     top: 30%;
@@ -193,12 +321,14 @@ ul.dropdown-cart li .item-right button{
 }
 
 .btn-theme {
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-weight: 600;
     color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
     margin-right: 15px;
-    text-shadow: 1px 1px 3px #000000;
-    box-shadow: 1px 1px 3px #000000;
+    text-shadow: 1px 1px 5px #000000;
+    box-shadow: 1px 1px 5px #000000;
 }
 
 .btn-theme:hover {
@@ -363,6 +493,7 @@ PRICING STYLES
     font-size: 60px;
     font-weight: 900;
     color: #FFFFFF;
+    font-family: 'Exo 2', Arial, sans-serif; 
 }
 
 .db-pricing-eleven .price small {
@@ -378,7 +509,8 @@ PRICING STYLES
     margin-bottom: 20px;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 30px;
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-size: 33px;
 }
 
 .db-pricing-eleven .pricing-footer {
@@ -438,7 +570,7 @@ PRICING STYLES
     font-weight: 600;
     line-height: 27px;
     padding: 10px 0 10px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .footer ul {
     font-size: 13px;
