@@ -7,7 +7,7 @@ body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    margin: 0px 0px 10px 0px;    
+    margin: 0px 0px 25px 0px;    
 }
 
 h1 {
@@ -17,18 +17,22 @@ h1 {
     padding: 0px 0px 25px 0px;
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
 }
 
 h2 {
     font-size: 45px;
     font-family: 'Exo 2', Arial, sans-serif; 
     font-weight: 300;
+    text-align: left;
+    margin-top: 0px;
 }
 
 h3 {
     font-size: 30px;
     font-family: 'Exo 2', Arial, sans-serif; 
     font-weight: 500;
+    text-align: left;
 }
 
 
@@ -46,6 +50,10 @@ h3 {
     h3 {
         font-size: 25px;
     }
+}
+
+button > a {
+    color: white;
 }
 
 
@@ -199,49 +207,23 @@ navbar-brand {
 
 
 
-/* shopping cart */
-ul.dropdown-cart{
-    min-width:250px;
-}
-ul.dropdown-cart li .item{
-    display:block;
-    padding:3px 10px;
-    margin: 3px 0;
-}
-ul.dropdown-cart li .item:hover{
-    background-color:#f3f3f3;
-}
-ul.dropdown-cart li .item:after{
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+/* products list */
+.btn-product {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-ul.dropdown-cart li .item-left{
-    float:left;
-}
-ul.dropdown-cart li .item-left img,
-ul.dropdown-cart li .item-left span.item-info{
-    float:left;
-}
-ul.dropdown-cart li .item-left span.item-info{
-    margin-left:10px;   
-}
-ul.dropdown-cart li .item-left span.item-info span{
-    display:block;
-}
-ul.dropdown-cart li .item-right{
-    float:right;
-}
-ul.dropdown-cart li .item-right button{
-    margin-top:14px;
+.product-buttons {
+    margin-bottom: -10px;
 }
 
+.product-list-img {
+    margin-bottom: -10px;
+}
 
-
+.thumbnail {
+    margin-bottom: 30px;
+}
 
 
 
@@ -295,22 +277,30 @@ ul.dropdown-cart li .item-right button{
     right: auto;
     width: 96.66666666666666%;
     color: #fff;
+    text-align: center;
 }
 
 .header-text h2 {
     font-size: 25px;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .header-text h2 span {
     background-color: #2980b9;
-    padding: 10px;    
+    padding: 10px;
+    text-align: center;
+}
+
+.header-text h3 {
+    text-align: center;
 }
 
 .header-text h3 span {
     background-color: #000;
     font-size: 15px;
-    padding: 15px;        
+    padding: 15px;
+    text-align: center;
 }
 
 .btn-min-block {
@@ -490,7 +480,6 @@ PRICING STYLES
     margin-right: 5px;
 }
 
-
 .db-pricing-eleven .price {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 40px 20px 20px 20px;
@@ -543,6 +532,10 @@ PRICING STYLES
 
 
 /* footer */
+footer {
+    margin-top: 25px;
+}
+
 .full {
     width: 100%;	
 }
