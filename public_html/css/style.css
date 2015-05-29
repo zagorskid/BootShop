@@ -206,6 +206,12 @@ navbar-brand {
 }
 
 
+.form-legend {
+    text-align: center;
+    font-family: 'Exo 2', Arial, sans-serif; 
+    font-weight: 600;
+}
+
 
 /* products list */
 .btn-product {
