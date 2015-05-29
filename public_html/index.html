@@ -7,10 +7,25 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>PhotoShop Stock</title>
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>        
+        <link href="css/bootstrap.min.css" rel="stylesheet">        
         <link href="css/style.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Exo+2:400,300,200,200italic,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!--Include the SimpleCart(js) script-->
+        <script src="js/simpleCart.js" type="text/javascript" charset="utf-8"></script>
+        <!--Make a new cart instance with your paypal login email-->
+        <script type="text/javascript">
+            simpleCart = new cart("admin@photoshop.com");
+        </script>
+        <!--CSS for the Cart. -->
+        <link rel="stylesheet" href="css/cart.css" type="text/css" media="screen" charset="utf-8" />
+
+
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +48,6 @@
                         }
                 );
             });
-
             $(document).ready(function () {
                 //Events that reset and restart the timer animation when the slides change
                 $("#transition-timer-carousel").on("slide.bs.carousel", function (event) {
@@ -46,7 +60,6 @@
                     $(".transition-timer-carousel-progress-bar", this)
                             .addClass("animate").css("width", "100%");
                 });
-
                 //Kick off the initial slide animation when the document is ready
                 $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
                         .css("width", "100%");
@@ -56,12 +69,6 @@
     </head>
 
     <body>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-
-
         <nav class="navbar navbar-default navbar-main" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -143,66 +150,15 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> <span class="glyphicon glyphicon-shopping-cart"></span> 7 Items <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"> 
+                                <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Cart&nbsp;<span class="badge"><span class="simpleCart_quantity"></span></span> <span class="caret"></span>
+                            </a>
                             <ul class="dropdown-menu dropdown-cart" role="menu">
                                 <li>
-                                    <span class="item">
-                                        <span class="item-left">
-                                            <img src="http://lorempixel.com/50/50/" alt="" />
-                                            <span class="item-info">
-                                                <span>Item name</span>
-                                                <span>23$</span>
-                                            </span>
-                                        </span>
-                                        <span class="item-right">
-                                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                                        </span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="item">
-                                        <span class="item-left">
-                                            <img src="http://lorempixel.com/50/50/" alt="" />
-                                            <span class="item-info">
-                                                <span>Item name</span>
-                                                <span>23$</span>
-                                            </span>
-                                        </span>
-                                        <span class="item-right">
-                                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                                        </span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="item">
-                                        <span class="item-left">
-                                            <img src="http://lorempixel.com/50/50/" alt="" />
-                                            <span class="item-info">
-                                                <span>Item name</span>
-                                                <span>23$</span>
-                                            </span>
-                                        </span>
-                                        <span class="item-right">
-                                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                                        </span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="item">
-                                        <span class="item-left">
-                                            <img src="http://lorempixel.com/50/50/" alt="" />
-                                            <span class="item-info">
-                                                <span>Item name</span>
-                                                <span>23$</span>
-                                            </span>
-                                        </span>
-                                        <span class="item-right">
-                                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                                        </span>
-                                    </span>
+                                    <a class="text-center" style="padding: 10px 0px" href="show-cart.html"><strong>Total cost: <span class="simpleCart_total"></span></strong></a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a class="text-center" href="">View Cart</a></li>
+                                <li><a class="text-center" href="show-cart.html">View Cart</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -310,7 +266,7 @@
                 </div>
             </div>        
 
-            <div class="row db-padding-btm db-attached" style="margin-top: 20px;">
+            <div class="row db-padding-btm db-attached" style="margin-top: 20px; margin-bottom: -30px">
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <div class="db-wrapper">
                         <div class="db-pricing-eleven db-bk-color-one">
@@ -380,12 +336,10 @@
                 </div>
 
             </div>
-
         </div>
 
 
-
-
+        
         <!-- FOOTER -->
         <footer>
             <div class="footer" id="footer">
@@ -458,6 +412,4 @@
 
 
     </body>
-
-
 </html>

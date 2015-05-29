@@ -256,10 +256,10 @@ ul.dropdown-cart li .item-right button{
     z-index: 11;
 }
 .transition-timer-carousel .transition-timer-carousel-progress-bar {
-    height: 5px;
+    height: 3px;
     background-color: #5cb85c;
     width: 0%;
-    margin: -5px 0px 0px 0px;
+    margin: -3px 0px 0px 0px;
     border: none;
     z-index: 11;
     position: relative;
